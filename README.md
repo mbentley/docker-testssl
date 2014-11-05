@@ -14,7 +14,7 @@ Display full command usage:
 `docker run -it --rm mbentley/testssl`
 
 Test for Heartbleed (CVE-2014-0160):
-`docker run -it --rm testssl -B mbentley.net`
+`docker run -it --rm mbentley/testssl -B mbentley.net`
 
 Test for SSLv3 (and list available protocols):
-`docker run -it --rm testssl -p mbentley.net`
+`docker run -it --rm mbentley/testssl -p mbentley.net`
