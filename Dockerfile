@@ -3,7 +3,7 @@ MAINTAINER Matt Bentley <mbentley@mbentley.net>
 RUN (echo "deb http://http.debian.net/debian/ jessie main contrib non-free" > /etc/apt/sources.list && echo "deb http://http.debian.net/debian/ jessie-updates main contrib non-free" >> /etc/apt/sources.list && echo "deb http://security.debian.org/ jessie/updates main contrib non-free" >> /etc/apt/sources.list)
 RUN apt-get update
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential wget zlib1g-dev netcat host vim-common
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential wget zlib1g-dev netcat host vim-common bsdmainutils
 
 ENV OPENSSL_VER openssl-1.0.1j
 RUN (wget -O /tmp/${OPENSSL_VER}.tar.gz https://www.openssl.org/source/${OPENSSL_VER}.tar.gz &&\
