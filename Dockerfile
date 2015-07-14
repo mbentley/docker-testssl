@@ -2,7 +2,7 @@ FROM debian:jessie
 MAINTAINER Matt Bentley <mbentley@mbentley.net>
 RUN (apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential wget zlib1g-dev netcat host vim-common bsdmainutils)
 
-ENV OPENSSL_VER openssl-1.0.2c
+ENV OPENSSL_VER openssl-1.0.2d
 RUN (wget -O /tmp/${OPENSSL_VER}.tar.gz https://www.openssl.org/source/${OPENSSL_VER}.tar.gz &&\
   cd /tmp/ && tar zxvf ${OPENSSL_VER}.tar.gz &&\
   cd /tmp/${OPENSSL_VER} &&\
