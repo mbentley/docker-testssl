@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 MAINTAINER Matt Bentley <mbentley@mbentley.net>
 
 RUN apt-get update &&\
@@ -11,4 +11,4 @@ RUN cd /opt &&\
 
 USER nobody
 ENTRYPOINT ["/opt/testssl.sh/testssl.sh"]
-CMD ["-h"]
+CMD ["--help"]
