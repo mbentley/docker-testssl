@@ -2,7 +2,7 @@ FROM debian:stretch
 MAINTAINER Matt Bentley <mbentley@mbentley.net>
 
 RUN apt-get update &&\
-  DEBIAN_FRONTEND=noninteractive apt-get install -y bsdmainutils git dnsutils &&\
+  DEBIAN_FRONTEND=noninteractive apt-get install -y bsdmainutils git dnsutils procps &&\
   rm -rf /var/lib/apt/lists/*
 
 ENV TESTSSL_VER 2.9.5
